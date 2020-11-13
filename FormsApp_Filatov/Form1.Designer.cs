@@ -90,7 +90,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 702);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+
             // 
             // comboBox1
             // 
@@ -115,7 +115,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(339, 579);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+
             // 
             // comboBox2
             // 
@@ -139,7 +139,7 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+
             // 
             // listBox3
             // 
@@ -155,7 +155,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // checkBox1
             // 
@@ -189,7 +189,7 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Выбор Слов";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+
             // 
             // button1
             // 
@@ -298,7 +298,7 @@
             this.button14.TabIndex = 21;
             this.button14.Text = "Начать";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+
             // 
             // Все
             // 
@@ -332,7 +332,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Содержащие \"e-mail\"";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+
             // 
             // label1
             // 
@@ -342,7 +342,7 @@
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "Раздел 1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // label2
             // 
@@ -446,4 +446,5 @@
         private System.Windows.Forms.ListBox listBox2;
     }
 }
+
 
