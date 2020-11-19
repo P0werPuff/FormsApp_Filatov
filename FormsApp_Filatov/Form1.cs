@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace FormsApp_Filatov
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         Panel panel;
         Label lbl1, lbl2, lbl3;
@@ -26,8 +26,8 @@ namespace FormsApp_Filatov
         RadioButton rbtn1, rbtn2, rbtn3;
         public Form1()
         {
-            Height = 820;
-            Width = 1000;
+            Height = 820; //
+            Width = 1000; //
             Text = "Лабораторная работа №1";
 
             panel = new Panel();
