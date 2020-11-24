@@ -23,24 +23,28 @@ namespace FormsApp_Filatov
             Width = 300;
             Text = "Добавление записи";
 
-            gbox = new GroupBox();
+            //"Добавить в"
+            gbox = new GroupBox(); 
             gbox.Text = "Добавить в";
             gbox.Size = new Size(260, 70);
             gbox.Location = new Point(10, 10);
             Controls.Add(gbox);
 
+            //"Раздел 1";
             rbtn1 = new RadioButton();
             rbtn1.Text = "Раздел 1";
             rbtn1.Size = new Size(80, 20);
             rbtn1.Location = new Point(10, 20);
             gbox.Controls.Add(rbtn1);
 
+            //"Раздел 2"
             rbtn2 = new RadioButton();
             rbtn2.Text = "Раздел 2";
             rbtn2.Size = new Size(80, 20);
             rbtn2.Location = new Point(10, 40);
             gbox.Controls.Add(rbtn2);
 
+            //"Введите текст:"
             lbl = new Label();
             lbl.Text = "Введите текст:";
             lbl.Size = new Size(90, 20);
@@ -52,6 +56,7 @@ namespace FormsApp_Filatov
             txt.Location = new Point(10, 105);
             Controls.Add(txt);
 
+            //"Добавить"
             btna = new Button();
             btna.Text = "Добавить";
             btna.Size = new Size(120, 25);
@@ -59,10 +64,12 @@ namespace FormsApp_Filatov
             btna.Click += Btna_Click;
             Controls.Add(btna);
 
+            //"Отмена"
             btnc = new Button();
             btnc.Text = "Отмена";
             btnc.Size = new Size(120, 25);
             btnc.Location = new Point(150, 130);
+            btnc.Click += Btnc_Click;
             Controls.Add(btnc);
         }
 
@@ -77,6 +84,12 @@ namespace FormsApp_Filatov
                 this.Close();
             }
         }
+        private void Btnc_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
 
         private void Form2_Load(object sender, EventArgs e)
         {

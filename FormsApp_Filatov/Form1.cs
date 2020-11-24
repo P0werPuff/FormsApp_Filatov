@@ -28,7 +28,7 @@ namespace FormsApp_Filatov
         {
             Height = 820;
             Width = 1000;
-            Text = "LabOsa1"; //LabOsa1
+            Text = "LabOsa1";
 
             panel = new Panel();
             panel.BorderStyle = BorderStyle.Fixed3D;
@@ -36,36 +36,42 @@ namespace FormsApp_Filatov
             panel.Location = new Point(10, 20);
             Controls.Add(panel);
 
+            //"Раздел 1"
             lbl1 = new Label();
             lbl1.Text = "Раздел 1";
             lbl1.Size = new Size(60, 20);
             lbl1.Location = new Point(80, 20);
             panel.Controls.Add(lbl1);
 
+            //"Раздел 2"
             lbl2 = new Label();
             lbl2.Text = "Раздел 2";
             lbl2.Size = new Size(60, 20);
-            lbl2.Location = new Point(410, 20);
+            lbl2.Location = new Point(400, 20);
             panel.Controls.Add(lbl2);
 
             combox1 = new ComboBox();
-            combox1.Text = "Сортировка по...";
             combox1.Size = new Size(180, 20);
             combox1.Location = new Point(20, 50);
+            combox1.Items.Add("Сортировка по");
             combox1.Items.Add("Алфавиту (по возрастанию)");
             combox1.Items.Add("Алфавиту (по убыванию)");
             combox1.Items.Add("Длине слова (по возрастанию)");
             combox1.Items.Add("Длине слова (по убыванию)");
+            combox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox1.SelectedIndex = 0;
             panel.Controls.Add(combox1);
 
             combox2 = new ComboBox();
-            combox2.Text = "Сортировка по...";
             combox2.Size = new Size(180, 20);
             combox2.Location = new Point(340, 50);
+            combox2.Items.Add("Сортировка по");
             combox2.Items.Add("Алфавиту (по возрастанию)");
             combox2.Items.Add("Алфавиту (по убыванию)");
             combox2.Items.Add("Длине слова (по возрастанию)");
             combox2.Items.Add("Длине слова (по убыванию)");
+            combox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox2.SelectedIndex = 0;
             panel.Controls.Add(combox2);
 
             lbox1 = new ListBox();
@@ -85,6 +91,7 @@ namespace FormsApp_Filatov
             btnl.Click += Btnl_Click;
             panel.Controls.Add(btnl);
 
+            //">"
             btnr = new Button();
             btnr.Text = ">";
             btnr.Size = new Size(120, 30);
@@ -92,6 +99,7 @@ namespace FormsApp_Filatov
             btnr.Click += Btnr_Click;
             panel.Controls.Add(btnr);
 
+            //"<<"
             btnAl = new Button();
             btnAl.Text = "<<";
             btnAl.Size = new Size(120, 30);
@@ -99,6 +107,7 @@ namespace FormsApp_Filatov
             btnAl.Click += BtnAl_Click;
             panel.Controls.Add(btnAl);
 
+            //">>"
             btnAr = new Button();
             btnAr.Text = ">>";
             btnAr.Size = new Size(120, 30);
@@ -106,6 +115,7 @@ namespace FormsApp_Filatov
             btnAr.Click += BtnAr_Click;
             panel.Controls.Add(btnAr);
 
+            //"Сортировать"
             btnr11 = new Button();
             btnr11.Text = "Сортировать";
             btnr11.Size = new Size(120, 40);
@@ -113,6 +123,7 @@ namespace FormsApp_Filatov
             btnr11.Click += Btnr11_Click;
             panel.Controls.Add(btnr11);
 
+            //"Очистить"
             btnr21 = new Button();
             btnr21.Text = "Очистить";
             btnr21.Size = new Size(120, 40);
@@ -120,6 +131,7 @@ namespace FormsApp_Filatov
             btnr21.Click += Btnr21_Click;
             panel.Controls.Add(btnr21);
 
+            //"Добавить"
             btnr12 = new Button();
             btnr12.Text = "Добавить";
             btnr12.Size = new Size(120, 40);
@@ -127,6 +139,7 @@ namespace FormsApp_Filatov
             btnr12.Click += Btnr12_Click;
             panel.Controls.Add(btnr12);
 
+            //"Удалить"
             btnr22 = new Button();
             btnr22.Text = "Удалить";
             btnr22.Size = new Size(120, 40);
@@ -134,6 +147,7 @@ namespace FormsApp_Filatov
             btnr22.Click += Btnr22_Click;
             panel.Controls.Add(btnr22);
 
+            //"Сортировать"
             btnr13 = new Button();
             btnr13.Text = "Сортировать";
             btnr13.Size = new Size(120, 40);
@@ -141,6 +155,7 @@ namespace FormsApp_Filatov
             btnr13.Click += Btnr13_Click;
             panel.Controls.Add(btnr13);
 
+            //"Очистить"
             btnr23 = new Button();
             btnr23.Text = "Очистить";
             btnr23.Size = new Size(120, 40);
@@ -148,12 +163,14 @@ namespace FormsApp_Filatov
             btnr23.Click += Btnr23_Click;
             panel.Controls.Add(btnr23);
 
+            //"Поиск"
             gbox1 = new GroupBox();
             gbox1.Text = "Поиск";
             gbox1.Size = new Size(320, 220);
             gbox1.Location = new Point(30, 500);
             panel.Controls.Add(gbox1);
 
+            //"Введите искомое слово"
             lbl3 = new Label();
             lbl3.Text = "Введите искомое слово";
             lbl3.Size = new Size(150, 20);
@@ -170,18 +187,21 @@ namespace FormsApp_Filatov
             lbox3.Location = new Point(20, 80);
             gbox1.Controls.Add(lbox3);
 
+            //"Раздел 1"
             cbox1 = new CheckBox();
             cbox1.Text = "Раздел 1";
-            cbox1.Size = new Size(70, 20);
+            cbox1.Size = new Size(80, 20);
             cbox1.Location = new Point(230, 90);
             gbox1.Controls.Add(cbox1);
 
+            //"Раздел 2"
             cbox2 = new CheckBox();
             cbox2.Text = "Раздел 2";
-            cbox2.Size = new Size(70, 20);
+            cbox2.Size = new Size(80, 20);
             cbox2.Location = new Point(230, 120);
             gbox1.Controls.Add(cbox2);
 
+            //"Поиск"
             btnf = new Button();
             btnf.Text = "Поиск";
             btnf.Size = new Size(80, 50);
@@ -189,6 +209,7 @@ namespace FormsApp_Filatov
             btnf.Click += Btnf_Click;
             gbox1.Controls.Add(btnf);
 
+            //"Сброс"
             btnc = new Button();
             btnc.Text = "Сброс";
             btnc.Size = new Size(160, 60);
@@ -196,6 +217,7 @@ namespace FormsApp_Filatov
             btnc.Click += Btnc_Click;
             panel.Controls.Add(btnc);
 
+            //"Выход"
             btne = new Button();
             btne.Text = "Выход";
             btne.Size = new Size(160, 60);
@@ -208,30 +230,35 @@ namespace FormsApp_Filatov
             rtxt.Location = new Point(560, 20);
             Controls.Add(rtxt);
 
+            //"Выбор слов"
             gbox2 = new GroupBox();
             gbox2.Text = "Выбор слов";
             gbox2.Size = new Size(400, 120);
             gbox2.Location = new Point(560, 630);
             Controls.Add(gbox2);
 
+            //"Все"
             rbtn1 = new RadioButton();
             rbtn1.Text = "Все";
             rbtn1.Size = new Size(100, 20);
             rbtn1.Location = new Point(10, 20);
             gbox2.Controls.Add(rbtn1);
 
+            //"Содержащие цифры"
             rbtn2 = new RadioButton();
             rbtn2.Text = "Содержащие цифры";
             rbtn2.Size = new Size(150, 20);
             rbtn2.Location = new Point(10, 50);
             gbox2.Controls.Add(rbtn2);
 
+            //"Содержащие e-mail"
             rbtn3 = new RadioButton();
             rbtn3.Text = "Содержащие e-mail";
             rbtn3.Size = new Size(150, 20);
             rbtn3.Location = new Point(10, 80);
             gbox2.Controls.Add(rbtn3);
 
+            //"Начать"
             btns = new Button();
             btns.Text = "Начать";
             btns.Size = new Size(100, 80);
@@ -246,6 +273,39 @@ namespace FormsApp_Filatov
             menuitem1.MenuItems.Add("Exit", new EventHandler(menuitem1_Exit));
             menu.MenuItems.Add(menuitem1);
             Menu = menu;
+        }
+        private void Btne_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+        private void menuitem1_Exit(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Btnc_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ты точно хочешь сбросить все параметры?", "Сброс", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                lbox1.Items.Clear();
+                lbox2.Items.Clear();
+                lbox3.Items.Clear();
+                rtxt.Clear();
+                rbtn1.Checked = false;
+                rbtn2.Checked = false;
+                rbtn3.Checked = false;
+                cbox1.Checked = false;
+                cbox2.Checked = false;
+                txt.Text = "";
+                combox1.SelectedIndex = 0;
+                combox2.SelectedIndex = 0;
+            }
         }
 
         private void Btns_Click(object sender, EventArgs e)
@@ -271,36 +331,6 @@ namespace FormsApp_Filatov
             lbox1.EndUpdate();
         }
 
-        private void menuitem1_Exit(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-        private void Btne_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void Btnc_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Ты точно хочешь сбросить все параметры?", "Сброс", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                lbox1.Items.Clear();
-                lbox2.Items.Clear();
-                lbox3.Items.Clear();
-                rtxt.Clear();
-                rbtn1.Checked = false;
-                rbtn2.Checked = false;
-                rbtn3.Checked = false;
-                cbox1.Checked = false;
-                cbox2.Checked = false;
-            }
-        }
         private void Btnr13_Click(object sender, EventArgs e)
         {
             if (combox2.Text == "Алфавиту (по возрастанию)")
@@ -497,6 +527,7 @@ namespace FormsApp_Filatov
             lbox1.Items.Clear();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -530,4 +561,5 @@ namespace FormsApp_Filatov
         }
     }
 }
+
 
