@@ -26,8 +26,8 @@ namespace FormsApp_Filatov
         RadioButton rbtn1, rbtn2, rbtn3;
         public Form1()
         {
-            Height = 820;
-            Width = 1000;
+            Height = 840;
+            Width = 1150;
             Text = "LabOsa1";
 
             panel = new Panel();
@@ -49,30 +49,6 @@ namespace FormsApp_Filatov
             lbl2.Size = new Size(60, 20);
             lbl2.Location = new Point(400, 20);
             panel.Controls.Add(lbl2);
-
-            combox1 = new ComboBox();
-            combox1.Size = new Size(180, 20);
-            combox1.Location = new Point(20, 50);
-            combox1.Items.Add("Сортировка по");
-            combox1.Items.Add("Алфавиту (по возрастанию)");
-            combox1.Items.Add("Алфавиту (по убыванию)");
-            combox1.Items.Add("Длине слова (по возрастанию)");
-            combox1.Items.Add("Длине слова (по убыванию)");
-            combox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            combox1.SelectedIndex = 0;
-            panel.Controls.Add(combox1);
-
-            combox2 = new ComboBox();
-            combox2.Size = new Size(180, 20);
-            combox2.Location = new Point(340, 50);
-            combox2.Items.Add("Сортировка по");
-            combox2.Items.Add("Алфавиту (по возрастанию)");
-            combox2.Items.Add("Алфавиту (по убыванию)");
-            combox2.Items.Add("Длине слова (по возрастанию)");
-            combox2.Items.Add("Длине слова (по убыванию)");
-            combox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            combox2.SelectedIndex = 0;
-            panel.Controls.Add(combox2);
 
             lbox1 = new ListBox();
             lbox1.Size = new Size(180, 300);
@@ -266,6 +242,30 @@ namespace FormsApp_Filatov
             btns.Click += Btns_Click;
             gbox2.Controls.Add(btns);
 
+            combox1 = new ComboBox();
+            combox1.Size = new Size(180, 20);
+            combox1.Location = new Point(20, 50);
+            combox1.Items.Add("Сортировка по");
+            combox1.Items.Add("Алфавиту (по возрастанию)");
+            combox1.Items.Add("Алфавиту (по убыванию)");
+            combox1.Items.Add("Длине слова (по возрастанию)");
+            combox1.Items.Add("Длине слова (по убыванию)");
+            combox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox1.SelectedIndex = 0;
+            panel.Controls.Add(combox1);
+
+            combox2 = new ComboBox();
+            combox2.Size = new Size(180, 20);
+            combox2.Location = new Point(340, 50);
+            combox2.Items.Add("Сортировка по");
+            combox2.Items.Add("Алфавиту (по возрастанию)");
+            combox2.Items.Add("Алфавиту (по убыванию)");
+            combox2.Items.Add("Длине слова (по возрастанию)");
+            combox2.Items.Add("Длине слова (по убыванию)");
+            combox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox2.SelectedIndex = 0;
+            panel.Controls.Add(combox2);
+
             MainMenu menu = new MainMenu();
             MenuItem menuitem1 = new MenuItem("File");
             menuitem1.MenuItems.Add("Open", new EventHandler(menuitem1_Open));
@@ -276,14 +276,14 @@ namespace FormsApp_Filatov
         }
         private void Btne_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Ты уверен, что хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
         private void menuitem1_Exit(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ты точно хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Ты уверен, что хочешь закрыть программу?", "Выход", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -291,7 +291,7 @@ namespace FormsApp_Filatov
 
         private void Btnc_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ты точно хочешь сбросить все параметры?", "Сброс", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Ты уверен, что хочешь сбросить все параметры?", "Сброс", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 lbox1.Items.Clear();
                 lbox2.Items.Clear();
@@ -517,23 +517,6 @@ namespace FormsApp_Filatov
             }
         }
 
-        private void Btnr23_Click(object sender, EventArgs e)
-        {
-            lbox2.Items.Clear();
-        }
-
-        private void Btnr21_Click(object sender, EventArgs e)
-        {
-            lbox1.Items.Clear();
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        
-        
         private void menuitem1_Open(object sender, EventArgs e)
         {
             OpenFileDialog OpenDlg = new OpenFileDialog();
@@ -558,6 +541,21 @@ namespace FormsApp_Filatov
                 Writer.Close();
             }
             SaveDlg.Dispose();
+        }
+        private void Btnr23_Click(object sender, EventArgs e)
+        {
+            lbox2.Items.Clear();
+        }
+
+        private void Btnr21_Click(object sender, EventArgs e)
+        {
+            lbox1.Items.Clear();
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
