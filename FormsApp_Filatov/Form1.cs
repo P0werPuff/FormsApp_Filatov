@@ -24,6 +24,14 @@ namespace FormsApp_Filatov
         CheckBox cbox1, cbox2;
         RichTextBox rtxt;
         RadioButton rbtn1, rbtn2, rbtn3;
+        PictureBox img;
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            img.Image = new Bitmap("pilti.jpg");
+            img.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+       
         public Form1()
         {
             Height = 840;
